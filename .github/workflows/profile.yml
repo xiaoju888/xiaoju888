@@ -30,13 +30,39 @@ jobs:
             dist/github-snake-dark.svg?palette=github-dark
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Prepare dark block settings
+        run: |
+          mkdir -p conf
+          curl --fail --location https://raw.githubusercontent.com/yoshi389111/github-profile-3d-contrib/main/sample-settings/gitblock.json -o conf/gitblock-dark.json
+          python - <<'PY'
+          import json
 
+          path = "conf/gitblock-dark.json"
+
+          with open(path, "r", encoding="utf-8") as file:
+              settings = json.load(file)
+
+          settings.update({
+              "fileName": "profile-gitblock-dark.svg",
+              "backgroundColor": "#0d1117",
+              "foregroundColor": "#c9d1d9",
+              "strongColor": "#ffffff",
+              "weakColor": "#484f58",
+              "radarColor": "#47a042"
+          })
+
+          settings["contribPatterns"][0]["top"]["backgroundColor"] = "#161b22"
+          settings["contribPatterns"][0]["top"]["foregroundColor"] = "#30363d"
+
+          with open(path, "w", encoding="utf-8") as file:
+              json.dump(settings, file, indent=2)
+          PY
       - name: Generate 3D contribution images
         uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-
+          SETTING_JSON: conf/gitblock-dark.json
       - name: Commit generated images
         run: |
           git config user.name "github-actions[bot]"
