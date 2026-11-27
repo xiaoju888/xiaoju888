@@ -1,16 +1,17 @@
-## Hi there 👋
+# 你好，我是小天猫 👋
 
-<!--
-**xiaoju888/xiaoju888** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+专注 Python 数据采集、数据清洗与数据存储。
 
-Here are some ideas to get you started:
+正在学习 LangChain、LangGraph 与 AI Agent 开发。
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 我的贡献动画
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/xiaoju888/xiaoju888/main/dist/github-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/xiaoju888/xiaoju888/main/dist/github-snake.svg">
+  <img alt="GitHub 贡献贪吃蛇" src="https://raw.githubusercontent.com/xiaoju888/xiaoju888/main/dist/github-snake.svg" width="100%">
+</picture>
+
+## 我的贡献积木
+
+<img alt="GitHub 贡献积木" src="https://raw.githubusercontent.com/xiaoju888/xiaoju888/main/profile-3d-contrib/profile-gitblock.svg" width="100%">
